@@ -1,0 +1,124 @@
+:root {
+    --spacex-blue: #005288;
+    --spacex-dark: #000000;
+    --spacex-light: #ffffff;
+    --spacex-grey: #eeeeee;
+    --accent: #cc0000;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--spacex-dark);
+    color: var(--spacex-light);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+.logo {
+    width: 200px;
+    filter: brightness(0) invert(1);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--spacex-blue);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 82, 136, 0.5);
+}
+
+.instruction {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+.question-section h2 {
+    margin: 1.5rem 0;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.answer-section {
+    margin: 2rem 0;
+    min-height: 150px;
+}
+
+#answer-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: left;
+    margin-top: 1rem;
+    border-left: 4px solid var(--spacex-blue);
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    background-color: var(--spacex-blue);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #003d66;
+}
+
+.btn.secondary {
+    background-color: transparent;
+    border: 1px solid var(--spacex-blue);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#progress {
+    font-family: monospace;
+    color: #888;
+}
+
+footer {
+    margin-top: 2rem;
+    color: #555;
+    font-size: 0.9rem;
+}

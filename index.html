@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX GSM Mock Interview - Ichi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://logos-world.net/wp-content/uploads/2020/09/SpaceX-Logo.png" alt="SpaceX Logo" class="logo">
+            <h1>Starlink GSM Interview Simulation</h1>
+        </header>
+
+        <main id="interview-app">
+            <div class="card">
+                <div class="interviewer-section">
+                    <img id="interviewer-photo" src="" alt="Interviewer" class="avatar">
+                    <p class="instruction">Click photo to play question</p>
+                </div>
+                
+                <div class="question-section">
+                    <h2 id="question-text">Question Loading...</h2>
+                    <audio id="question-audio"></audio>
+                </div>
+
+                <div class="answer-section">
+                    <button id="toggle-answer" class="btn secondary">Reveal Suggestion</button>
+                    <div id="answer-box" class="hidden">
+                        <h3>Strategic Answer Guidance:</h3>
+                        <p id="answer-text"></p>
+                    </div>
+                </div>
+
+                <div class="navigation">
+                    <button id="prev-btn" class="btn">Previous</button>
+                    <span id="progress">1 / 10</span>
+                    <button id="next-btn" class="btn">Next</button>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Good luck, Ichi. Make life multi-planetary. 🚀</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
