@@ -1,83 +1,204 @@
 :root {
-    --spacex-blue: #005288;
     --spacex-dark: #000000;
-    --spacex-light: #ffffff;
-    --spacex-grey: #eeeeee;
-    --accent: #cc0000;
+    --spacex-white: #ffffff;
+    --spacex-blue: #005288;
+    --spacex-gray: #f4f4f4;
+    --accent: #005288;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--spacex-dark);
-    color: var(--spacex-light);
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--spacex-gray);
+    color: var(--spacex-dark);
+    line-height: 1.6;
+    height: 100vh;
 }
 
+.app-layout {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 300px;
+    background: #1a1a1a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #333;
+}
+
+.sidebar-header {
+    padding: 20px;
+    background: #000;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-controls button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 10px;
+    opacity: 0.7;
+}
+
+.sidebar-controls button:hover {
+    opacity: 1;
+}
+
+#question-list {
+    list-style: none;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.question-item {
+    padding: 12px 20px;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.question-item:hover {
+    background: #333;
+}
+
+.question-item.active {
+    background: var(--spacex-blue);
+}
+
+.question-item.pinned {
+    border-left: 4px solid #ffcc00;
+}
+
+.question-item.hidden-item {
+    opacity: 0.4;
+    font-style: italic;
+}
+
+.q-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+}
+
+/* Main Container */
 .container {
-    width: 90%;
-    max-width: 800px;
-    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    overflow-y: auto;
 }
 
 header {
-    margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .logo {
     width: 200px;
-    filter: brightness(0) invert(1);
+    margin-bottom: 10px;
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    backdrop-filter: blur(10px);
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.top-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.icon-btn {
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.2s;
+}
+
+.icon-btn:hover {
+    background: #eee;
+}
+
+.icon-btn.active {
+    background: #ffcc00;
+    border-color: #ffcc00;
+}
+
+.interviewer-section {
+    margin-bottom: 30px;
 }
 
 .avatar {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    border: 4px solid var(--spacex-blue);
+    border: 3px solid var(--spacex-blue);
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s;
 }
 
 .avatar:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 82, 136, 0.5);
 }
 
 .instruction {
     font-size: 0.8rem;
-    color: #888;
-    margin-top: 0.5rem;
+    color: #666;
+    margin-top: 5px;
 }
 
 .question-section h2 {
-    margin: 1.5rem 0;
-    font-weight: 300;
-    line-height: 1.4;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 500;
 }
 
 .answer-section {
-    margin: 2rem 0;
-    min-height: 150px;
+    margin: 30px 0;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
 }
 
 #answer-box {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 1.5rem;
-    border-radius: 10px;
+    margin-top: 20px;
     text-align: left;
-    margin-top: 1rem;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 4px;
     border-left: 4px solid var(--spacex-blue);
 }
 
@@ -85,40 +206,59 @@ header {
     display: none;
 }
 
-.btn {
-    background-color: var(--spacex-blue);
-    color: white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s;
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
 }
 
-.btn:hover {
-    background-color: #003d66;
+.btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+#prev-btn, #next-btn {
+    background: var(--spacex-dark);
+    color: white;
+}
+
+#prev-btn:hover, #next-btn:hover {
+    background: #333;
 }
 
 .btn.secondary {
-    background-color: transparent;
-    border: 1px solid var(--spacex-blue);
+    background: transparent;
+    border: 1px solid var(--spacex-dark);
 }
 
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2rem;
+.btn.secondary:hover {
+    background: #eee;
 }
 
 #progress {
-    font-family: monospace;
-    color: #888;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 footer {
-    margin-top: 2rem;
-    color: #555;
+    margin-top: 40px;
+    color: #888;
     font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+    .app-layout {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: 200px;
+    }
 }
