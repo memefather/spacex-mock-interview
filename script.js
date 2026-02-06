@@ -178,6 +178,66 @@ const interviewData = [
         audio: "assets/q30.mp3",
         interviewer: "https://i.pravatar.cc/300?u=30",
         answer: "Exhaust all options: 1. Check every global warehouse/distributor. 2. Can Engineering 're-work' an older version of the part? 3. Can we 3D-print a temporary solution? 4. Buy out the strike (if possible/legal) or find the 'hidden' stock. Show extreme bias for action."
+    },
+    {
+        question: "Tell me about a time you had a significant conflict with an engineer or a manager over a technical decision. How did you resolve it and what was the outcome?",
+        audio: "assets/q31.mp3",
+        interviewer: "https://i.pravatar.cc/300?u=31",
+        answer: "Focus on the 'Physics First' principle. Show how you used data and technical reasoning to reach a consensus. SpaceX values truth over hierarchy."
+    },
+    {
+        question: "SpaceX works on extremely tight timelines. Give me an example of a time when you were completely overwhelmed by your workload. How did you prioritize and what did you delegate?",
+        audio: "assets/q32.mp3",
+        interviewer: "https://i.pravatar.cc/300?u=32",
+        answer: "Demonstrate your ability to triage tasks based on mission impact. Mention using your automation/CS skills to scale your throughput."
+    },
+    {
+        question: "Elon Musk believes in 'The Best Part is No Part.' Tell me about a time you simplified a complex process or eliminated a redundant step in a supply chain workflow.",
+        audio: "assets/q33.mp3",
+        interviewer: "https://i.pravatar.cc/300?u=33",
+        answer: "Describe a process optimization. Use metrics (time saved, cost reduced). Show you can think like an engineer to simplify the business side."
+    },
+    {
+        question: "We value ownership here. Tell me about a project you led where things went wrong due to a mistake you made. How did you take responsibility and fix the situation?",
+        audio: "assets/q34.mp3",
+        interviewer: "https://i.pravatar.cc/300?u=34",
+        answer: "Extreme ownership is key. Don't make excuses. Explain the mistake, the immediate fix, and the long-term process change to prevent recurrence."
+    },
+    {
+        question: "Describe a time you had to make a high-stakes decision with very limited information. What was your thought process and would you change anything looking back?",
+        audio: "assets/q35.mp3",
+        interviewer: "https://i.pravatar.cc/300?u=35",
+        answer: "Show how you use first principles to make the best possible bet under uncertainty. Acknowledge the risks and explain your mitigation strategy."
+    },
+    {
+        question: "SpaceX iterates fast. Tell me about a time you had to pivot your sourcing strategy entirely because of a sudden design change. How did you manage the vendor transition?",
+        audio: "assets/q36.mp3",
+        interviewer: "https://i.pravatar.cc/300?u=36",
+        answer: "Highlight agility. Explain how you maintained vendor relationships while moving at 'SpaceX speed.' Use your experience from Tesla/Rivian."
+    },
+    {
+        question: "Give me an example of when you went above and beyond your job description to ensure a project's success. What motivated you to do that?",
+        audio: "assets/q37.mp3",
+        interviewer: "https://i.pravatar.cc/300?u=37",
+        answer: "Connect it to the mission. Show that you aren't 'just a GSM' but a mission-focused contributor who will do whatever it takes to launch."
+    },
+    {
+        question: "How do you handle working with someone who has a completely different working style than you? Tell me about a time this happened and how you maintained productivity.",
+        audio: "assets/q38.mp3",
+        interviewer: "https://i.pravatar.cc/300?u=38",
+        answer: "Focus on professional outcomes. Show emotional intelligence and adaptability. The mission always comes first."
+    },
+    {
+        question: "SpaceX missions require 100% reliability. Tell me about a time you identified a quality or safety risk that others had missed. How did you escalate it?",
+        audio: "assets/q39.mp3",
+        interviewer: "https://i.pravatar.cc/300?u=39",
+        answer: "Detail the technical specifics. Show you have the 'eye for detail' required for aerospace components. Escalating for safety is always the right move."
+    },
+    {
+        question: "Finally, if you could change one thing about the supply chain at Tesla or Rivian, what would it be and why? How would you apply that lesson here at Starlink?",
+        audio: "assets/q40.mp3",
+        interviewer: "https://i.pravatar.cc/300?u=40",
+        answer: "Demonstrate deep reflection and strategic thinking. Show you've learned from the best in the industry and are ready to push the boundaries even further at SpaceX."
     }
 ];
 
