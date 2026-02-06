@@ -211,8 +211,8 @@ function updateUI() {
 }
 
 photo.addEventListener('click', () => {
-    if (audio.src.includes('assets/')) {
-        audio.play().catch(e => console.log("Audio not found, but that's okay for now!"));
+    if (audio.src && audio.src !== 'null') {
+        audio.play().catch(e => console.log("Audio play failed:", e));
     }
 });
 
